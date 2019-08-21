@@ -27,7 +27,7 @@ public class OAuth2Controller {
 	@Autowired
 	private OAuth2AuthorizedClientService authorizedClientService;
 	
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	public String index(Model model, OAuth2AuthenticationToken authentication) {
 		OAuth2AuthorizedClient authorizedClient = this.getAuthorizedClient(authentication);
 		model.addAttribute("userName", authentication.getName());
